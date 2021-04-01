@@ -1,0 +1,126 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+  // main 父级元素需要撑满整个高度
+  &-header + div {
+    flex: auto;
+  }
+}
+
+.fr-validate {
+  display: none;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.justify-between {
+  .tr {
+    button:nth-child(1) {
+      display: none !important;
+    }
+  }
+}
+
+.task_list_wrap {
+  width: 80%;
+  ul {
+    li:nth-child(1) {
+      .fr-item-action-icon {
+        display: none !important;
+      }
+    }
+  }
+
+  .fr-move-icon {
+    display: none !important;
+  }
+  .fr-wrapper .left-0 {
+    background-color: #1890ff !important;
+  }
+
+  .step_list {
+    ul {
+      li {
+        .fr-item-action-icon {
+          display: block !important;
+        }
+        .fr-move-icon {
+          display: none !important;
+        }
+      }
+
+      li:nth-child(1) {
+        .fr-item-action-icon {
+          display: none !important;
+        }
+      }
+    }
+    .justify-between {
+      .tr {
+        button:nth-child(1) {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+
+.task_taskName {
+  .ant-input-affix-wrapper {
+    border: 1px solid #d9d9d9 !important;
+    box-shadow: rgba(255, 225, 225, 0.1) 0 0 0 2px !important;
+  }
+}
+
+.mt10,
+.ant-form-item.mt10 {
+  margin-top: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
