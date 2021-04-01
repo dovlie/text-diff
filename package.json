@@ -12,11 +12,8 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
+    "*.{js,jsx,less}": [
       "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
     ]
   },
   "dependencies": {
